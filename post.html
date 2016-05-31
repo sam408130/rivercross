@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+	<meta charset="utf-8" />
+  <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/post.css">
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/leancloud.js"></script>
+  <script src="js/ng-file-upload/dist/ng-file-upload.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+
+<body ng-controller="Post" >
+	
+	
+
+	<img ng-src="img/property-small-1.png"  style="width:50px;height: 50px;display: block"  type="file" ngf-select="uploadFile($file, $invalidFiles)" accept="image/*"  ngf-max-size="10MB" ngf-no-object-url="true" >
+	
+	
+	<img ng-repeat="url in localimages" ng-src="{{url}}"  class="coverimage">
+	
+    <div class="form-group">
+        <label >Name</label>
+        <input  ng-model="item.title" type="text" />
+    </div>	
+
+
+     <div class="form-group">
+        <label >Price</label>
+        <input  ng-model="item.price" type="text" />
+    </div>	   
+	<label >Class A</label>
+    <select  ng-model="item.classA" ng-change="CatagoryAChange()">
+    	
+      	<option ng-repeat="y in CatagoryA" value="{{y.index}}" >{{y.name}}</option>
+    </select>
+	
+	<label >Class B</label>
+	<select  ng-model="item.classB">
+		
+	  	<option ng-repeat="y in CatagoryB" value="{{y.index}}">{{y.name}}</option>
+	</select>    
+
+	<div style="width: 100px;height: 20px;background-color: #FF5555;color: white;text-align: center;line-height: 20px;" ng-click="submit()">提交</div>
+
+</body>
+
+</html>
