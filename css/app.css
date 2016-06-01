@@ -11,7 +11,7 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   line-height: 1.42857143;
-  color: #58666e;
+  color: #c6c6c6;
   background-color: transparent;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 a {
-  color: #363f44;
+  color: #c6c6c6;
   text-decoration: none;
   cursor: pointer;
 }
@@ -679,7 +679,7 @@ body {
   z-index: -1;
   display: block;
   width: inherit;
-  background-color: #f0f3f4;
+  background-color: #3d3d3d;
   border: inherit;
   content: "";
 }
@@ -701,6 +701,8 @@ body {
 
 .app-aside {
   float: left;
+  width: 230px;
+  margin-top: 100px;
 }
 
 .app-aside:before {
@@ -719,7 +721,7 @@ body {
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
 }
 
 .app-aside-folded .app-aside-footer {
@@ -736,6 +738,7 @@ body {
 
 .app-content {
   height: 100%;
+  background-color: #3d3d3d;
 }
 
 .app-content:before,
@@ -847,6 +850,8 @@ body {
   margin: 0;
   border-width: 0;
   border-radius: 0;
+  background-color: #424242;
+  color: #c6c6c6;
 }
 
 .navbar .navbar-form-sm {
@@ -869,6 +874,7 @@ body {
 .navbar-md .navbar-nav > li > a {
   padding-top: 20px;
   padding-bottom: 20px;
+  color: #c6c6c6;
 }
 
 .navbar-md .navbar-brand {
@@ -883,6 +889,7 @@ body {
   background-color: transparent;
   border: none;
 }
+
 
 .navbar-brand {
   display: inline-block;
@@ -900,8 +907,7 @@ body {
 }
 
 .navbar-brand img {
-  max-height: 20px;
-  margin-top: -4px;
+  max-height: 50px;
   vertical-align: middle;
 }
 
@@ -951,6 +957,7 @@ body {
   .app-aside-folded .app-content,
   .app-aside-folded .app-footer {
     margin-left: 60px;
+
   }
   .app-aside-folded .app-header .navbar-brand {
     display: block;
@@ -1053,6 +1060,7 @@ body {
   .navbar-nav {
     margin-top: 0;
     margin-bottom: 0;
+
   }
   .navbar-nav > li > a {
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -1195,13 +1203,13 @@ html {
 }
 
 .navi ul.nav li li a {
-  padding-left: 55px;
+  padding-left: 60px;
 }
 
 .navi ul.nav li a {
   position: relative;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 50px;
   font-weight: normal;
   text-transform: none;
   -webkit-transition: background-color 0.2s ease-in-out 0s;
@@ -2911,8 +2919,8 @@ fieldset[disabled] .i-checks input + i:before {
 }
 
 .bg-dark {
-  color: #a6a8b1;
-  background-color: #3a3f51;
+  color: #c6c6c6;
+  background-color: #2c2c2c;
 }
 
 .bg-dark.lt,
@@ -4020,6 +4028,9 @@ a.text-#000000:hover {
 
 .font-bold {
   font-weight: 700;
+  width: 100%;
+  display: block;
+  text-align: left;
 }
 
 .text-3x {
@@ -4366,6 +4377,7 @@ a.text-#000000:hover {
 .m-l {
   margin-left: 15px;
 }
+
 
 .m-l-md {
   margin-left: 20px;
@@ -5108,10 +5120,8 @@ a.text-#000000:hover {
  .property {
   display: inline-block;
   zoom: 1;
-  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  background-color: #fff;
+
+  background-color: #3d3d3d;
 
   margin: 30px;
   padding-bottom: 10px;
@@ -5128,7 +5138,10 @@ a.text-#000000:hover {
 
  .property .image {
   overflow: hidden;
-  position: relative
+  position: relative;
+  border:none;
+  border-radius: 5px;
+
 }
 
  .property .image a {
@@ -5157,12 +5170,12 @@ a.text-#000000:hover {
   height: auto;
   width: 270px;
   height: 200px;
+  border-radius: 5px;
 }
 
  .property h2 {
   line-height: 22px;
-  margin: 10px 0px 0px 0px;
-  padding: 0px 15px
+  margin: 0px;
 }
 
  .property h2 a {
@@ -5170,12 +5183,10 @@ a.text-#000000:hover {
   -moz-transition: color 0.1s ease-in;
   -o-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in;
-  color: #06a7ea;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal
 }
  .property h2 a:hover {
-  color: #0584b8;
   text-decoration: none
 }
 
@@ -5184,13 +5195,16 @@ a.text-#000000:hover {
 }
 
  .property .price {
-  background-color: #fff;
-  color: #313131;
-  font-size: 18px;
-  padding: 5px 16px;
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 10px;
   position: absolute;
-  right: 15px;
-  bottom: 15px
+  padding: 2px 5px;
+  border-radius: 5px;
+  height: 20px;
+  line-height: 20px;
+  right: 5px;
+  bottom: 25px
 }
 
  .property .reduced {
@@ -5204,19 +5218,22 @@ a.text-#000000:hover {
 }
 
  .property .area {
-  color: #313131;
+  color: #c6c6c6;
   float: left;
-  margin-top: 8px
+
 }
 
  .property .area .key {
   display: inline;
   font-weight: bold;
-  padding: 0px 0px 0px 15px
+  color: #c6c6c6;
+  font-size: 12px;
 }
 
  .property .area .value {
   display: inline
+  color: #c6c6c6;
+  font-size: 12px;
 }
 
  .property .bedrooms {
