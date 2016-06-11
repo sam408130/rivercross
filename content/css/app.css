@@ -1,0 +1,255 @@
+/*********************
+
+    Basic Styles
+
+**********************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color:#3D3D3D;
+  color: #F1F1F1;
+
+}
+
+h1 {  
+  font-size: 2rem; /* 32px/16px  */
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5em; /* 32px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.1em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+}
+
+
+a:link {
+
+  text-decoration: none;
+}
+
+
+
+/*********************
+
+    Side-bar Styles
+
+**********************/
+
+#side-bar{
+
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:230px;
+    color:#C6C6C6;
+    background-color:#1B1B1B;
+
+}
+
+#side-bar img{
+    padding:50px;   
+}
+
+#side-bar ul{
+  list-style:none;
+  margin: 20px 0;
+  padding-left:40px;
+}
+
+#side-bar li {
+    margin-bottom:14px; 
+}
+
+/*********************
+
+    Content Styles
+
+**********************/
+
+/* Top Nav ------------------ */
+#top-nav {
+
+    height:60px;
+    color:#C6C6C6;
+    line-height:60px;
+    background-color:rgba(0, 0, 0, 0.2);
+    z-index:1000;
+    position:fixed;
+    top:0;
+    left:230px;
+    width:calc(100vw - 230px);
+
+}
+
+#fold-btn{
+    
+    float:left;
+    margin-left:10px;
+    color:#c6c6c6;
+}
+
+ul.top-nav-list li{
+
+     float:right;
+     margin-right:50px;
+}
+
+
+/* Main Header ------------------ */
+
+#content{
+    
+    margin-left:230px;
+}
+
+.main-header{
+
+  height: 300px;
+  background:url('../img/birds.jpg') repeat-x;
+  background-size:contain;
+  padding:50px;
+
+
+}
+
+.intro{
+  margin-left:30px;  
+}
+
+/* Gallery ------------------ */
+
+.gallery{
+    padding:20px 40px;
+}
+
+
+.landing-page-category li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.products-list{
+    margin-top: 40px;
+}
+
+.products-list li{
+    margin:10px 30px;
+    display:inline-block;
+}
+
+.product-thumb{
+    width:300px;
+    height:225px;
+    border-radius:5px;
+    
+    
+
+}
+/* Breadcrumb------------------ */
+
+.breadcrumb-nav{
+    margin-top:100px;
+    margin-left:40px;
+    
+
+}
+
+.breadcrumb-nav ul > li{
+    display:inline-block;
+    font:12px;
+    color:#c6c6c6;
+}
+
+/* Detail Header------------------ */
+
+.detail-header{
+   height: 300px;
+  background-color:#353535;
+  padding:50px;
+}
+
+/* Footer ------------------ */
+#footer{
+    height:250px;
+    background-color:#2A2A2A;
+    padding:20px 0;
+}
+
+.wechat-info{
+    text-align:center;
+}
+
+.qrcode{
+    height:100px;
+    width:100px;
+    border-radius:10px;
+    border:15px solid #222;
+    background-image:url('../img/qrcode.png');
+    background-size:cover;
+}
+
+
+/* Float Clearfix ------------------ */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
