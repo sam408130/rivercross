@@ -5123,7 +5123,7 @@ a.text-#000000:hover {
 
   background-color: #3d3d3d;
 
-  margin: 30px;
+  padding: 30px;
   padding-bottom: 10px;
   position: relative
 }
@@ -5320,7 +5320,7 @@ a.text-#000000:hover {
 
 @media (max-width: 767px) {
    .property:nth-last-child(1), .property:nth-last-child(2), .property:nth-last-child(3) {
-    margin-bottom: 30px
+
   }
 
    .property:last-child {
@@ -5376,3 +5376,90 @@ a.text-#000000:hover {
     padding: 0px 10px
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.app-content .headtitle {
+  background-color: #353535;
+  padding-top: 84px;
+  padding-left: 48px;
+  padding-bottom:98px; 
+  color: #f1f1f1;
+  position: relative;
+}
+
+
+.app-content .headtitle .pin {
+  position: absolute;
+  bottom: -30px;
+  right: 70px;
+  width: 221px;
+  height: 65px;
+  background-color: #6bbf6b;
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 26px;
+  line-height: 65px;
+  border-radius: 6px;
+}
+
+
+.blackbackground {
+  background-color: #353535;
+  margin: 0px;
+}
+
+.app-content .itemdetail * {
+  margin:0px;
+}
+.app-content .itemdetail {
+
+  background-color: #353535;
+  padding-top: 84px;
+  padding-left: 48px;
+  padding-bottom:98px; 
+  color: #c6c6c6;
+  position: relative;
+
+}
+
+.app-content .itemdetail .pin {
+  position: absolute;
+  bottom: -30px;
+  right: 70px;
+  width: 221px;
+  height: 65px;
+  background-color: #6bbf6b;
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 26px;
+  line-height: 65px;
+  border-radius: 6px;
+}
+
+.app-content .imagedetail p {
+    padding: 38px 100px;
+    color: #f1f1f1;
+    font-size: 20px;
+    opacity: 0.36;
+}
+
+.app-content .imagedetail img {
+
+  width: 395px;
+  height: 450px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  border-radius: 6px;
+}
+
+

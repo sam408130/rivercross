@@ -16,6 +16,23 @@
 	
 	
 
+<div id="id_video_container" style="width:100%;height:1px;"></div>
+<script src="http://qzonestyle.gtimg.cn/open/qcloud/video/live/h5/live_connect.js"></script>
+ <script type="text/javascript">
+            (function(){
+               var option ={"channel_id":"16093104850683348549","app_id":"1252252845","width":"1024","height":"768"};
+               new qcVideo.Player(
+                       /*代码中的id_video_container将会作为播放器放置的容器使用,可自行替换*/
+                       "id_video_container",
+                       option
+                   );
+             })()
+ </script>                        
+
+
+
+  
+
 	<img ng-src="img/property-small-1.png"  style="width:50px;height: 50px;display: block"  type="file" ngf-select="uploadFile($file, $invalidFiles)" accept="image/*"  ngf-max-size="10MB" ngf-no-object-url="true" >
 	
 	

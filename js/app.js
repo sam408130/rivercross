@@ -8,9 +8,48 @@ myapp.controller('Home',function($scope){
 	var ApplyObject = AV.Object.extend('Item');
 	var query = new AV.Query(ApplyObject);
 	$scope.items = [];
-	$scope.filter = function(classA,classB){
-		console.log(classA);
-		console.log(classB);
+	$scope.data = {};
+
+	$scope.pageIndex = 0;
+
+	var dict = {
+		'0_-1':[{name:'首页',index:[-1,-1]},{name:'Ionic产品',index:[0,-1]},{name:'',index:[]}],
+		'0_0':[{name:'首页',index:[-1,-1]},{name:'Ionic产品',index:[0,-1]},{name:'电商类模板',index:[0,0]}],
+		'0_1':[{name:'首页',index:[-1,-1]},{name:'Ionic产品',index:[0,-1]},{name:'社交类模板',index:[0,1]}],
+		'1_-1':[{name:'首页',index:[-1,-1]},{name:'App-UI产品',index:[1,-1]},{name:'',index:[]}],
+		'1_0':[{name:'首页',index:[-1,-1]},{name:'App-UI产品',index:[1,-1]},{name:'电商',index:[1,0]}],
+		'1_1':[{name:'首页',index:[-1,-1]},{name:'App-UI产品',index:[1,-1]},{name:'社交',index:[1,1]}],
+		'2_-1':[{name:'首页',index:[-1,-1]},{name:'Ionic定制化开发',index:[2,-1]},{name:'',index:[]}],
+		'3_-1':[{name:'首页',index:[-1,-1]},{name:'IOS定制化开发',index:[3,-1]},{name:'',index:[]}],
+		'4_-1':[{name:'首页',index:[-1,-1]},{name:'接单-毕业设计',index:[4,-1]},{name:'',index:[]}],
+		'5_-1':[{name:'首页',index:[-1,-1]},{name:'教程',index:[5,-1]},{name:'',index:[]}],
+		'5_0':[{name:'首页',index:[-1,-1]},{name:'教程',index:[5,-1]},{name:'设计教程',index:[5,0]}],
+		'5_1':[{name:'首页',index:[-1,-1]},{name:'教程',index:[5,-1]},{name:'前端教程',index:[5,1]}],
+		'5_2':[{name:'首页',index:[-1,-1]},{name:'教程',index:[5,-1]},{name:'AngularJs教程',index:[5,2]}],
+		'5_3':[{name:'首页',index:[-1,-1]},{name:'教程',index:[5,-1]},{name:'CG教程',index:[5,3]}]
+	};
+
+
+	$scope.routes = new Array();
+
+	$scope.routes = $scope.routes.concat([{name:'首页',index:[-1,-1]},{name:'',index:[]},{name:'',index:[]}]);
+
+
+
+
+	$scope.filter = function(classA,classB,pageIndex){
+
+		$scope.classA = classA;
+		$scope.classB = classB;
+		$scope.pageIndex = pageIndex;
+
+		var key = String(classA) + '_' + String(classB);
+		$scope.routes = dict[key]
+		if ($scope.data[key]){
+			$scope.items = $scope.data[key];
+			return;
+		}
+	
 		if(classA >= 0){
 			query.equalTo('classA',classA);
 		}
@@ -24,19 +63,47 @@ myapp.controller('Home',function($scope){
 				$scope.items = results.map(function(result){
 					return result._serverData;
 				});
-				$scope.$apply();
-				console.log($scope.items);
+				$scope.$apply(function(){
+					$scope.data[key] = $scope.items;
+				});
+				
 			},error:function(_,error){
 				alert(error.message);
 			}
 		})
 	};
 
-	$scope.filter(-1,-1);
+	$scope.filter(-1,-1,0);
+
+
+	$scope.filter_title = function(classA,classB,pageIndex,index){
+		if(index == 3){
+			return;
+		}
+		$scope.routes.splice(3,1);
+		$scope.filter(classA,classB,pageIndex);
+	};
+
 
 	$scope.refresh = function(){
 		window.location.reload();
 	};
+
+
+
+	$scope.showDetail = function(product){
+
+		$scope.filter(product.classA,product.classB,1);
+
+		$scope.routes.push({name:product.title})
+		$scope.currentProduct = product;
+		console.log(product);
+		$scope.pageIndex = 1;
+	
+	}
+
+
+
 });
 
 

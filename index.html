@@ -27,7 +27,7 @@
           <i class="glyphicon glyphicon-align-justify"></i>
         </button>
         <!-- brand -->
-        <a href="" class="navbar-brand text-lt">
+        <a href="#" class="navbar-brand text-lt" ng-click="refresh()">
           <img src="img/rivercrossLogo.png" alt="." >
         </a>
         <!-- / brand -->
@@ -92,23 +92,23 @@
               <li >
                 <a href class="auto">      
 
-                  <span class="font-bold" translate="aside.nav.DASHBOARD" ng-click="filter(0,-1)" >Ionic产品</span>
+                  <span class="font-bold" translate="aside.nav.DASHBOARD" ng-click="filter(0,-1,0)" >Ionic产品</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span translate="aside.nav.DASHBOARD" ng-click="filter(0,-1)">Ionic产品</span>
+                      <span translate="aside.nav.DASHBOARD" ng-click="filter(0,-1,0)">Ionic产品</span>
                     </a>
                   </li>
                   <li ui-sref-active="active" >
                     <a ui-sref="app.dashboard-v1">
-                      <span ng-click="filter(0,0)">电商类模板</span>
+                      <span ng-click="filter(0,0,0)">电商类模板</span>
                     </a>
                   </li>
                   <li ui-sref-active="active" >
                     <a ui-sref="app.dashboard-v2">
                       
-                      <span ng-click="filter(0,1)">社交类模板</span>
+                      <span ng-click="filter(0,1,0)">社交类模板</span>
                     </a>
                   </li>
                 </ul>
@@ -119,20 +119,20 @@
               <li >
                 <a href class="auto">      
             
-                  <span class="font-bold" translate="aside.nav.DASHBOARD" ng-click="filter(1,-1)">App-UI产品</span>
+                  <span class="font-bold" translate="aside.nav.DASHBOARD" ng-click="filter(1,-1,0)">App-UI产品</span>
                 </a>
                 <ul class="nav nav-sub dk">
                   <li class="nav-sub-header">
                     <a href>
-                      <span translate="aside.nav.DASHBOARD" ng-click="filter(1,-1)">App-UI产品</span>
+                      <span translate="aside.nav.DASHBOARD" ng-click="filter(1,-1,0)">App-UI产品</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(1,0)">
+                  <li ui-sref-active="active" ng-click="filter(1,0,0)">
                     <a ui-sref="app.dashboard-v1">
                       <span>电商</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(1,1)">
+                  <li ui-sref-active="active" ng-click="filter(1,1,0)">
                     <a ui-sref="app.dashboard-v2">
                      <!--  <b class="label bg-info pull-right">N</b> -->
                       <span>社交</span>
@@ -142,20 +142,20 @@
               </li>
 
 
-              <li ui-sref-active="active" ng-click="filter(2,-1)">
+              <li ui-sref-active="active" ng-click="filter(2,-1,0)">
                 <a ui-sref="app.calendar">
                   
                   <span class="font-bold" translate="aside.nav.CALENDAR">Ionic定制化开发</span>
                 </a>
               </li>
-              <li ui-sref-active="active" ng-click="filter(3,-1)">
+              <li ui-sref-active="active" ng-click="filter(3,-1,0)">
                 <a ui-sref="app.mail.list">
 <!--                   <b class="badge bg-info pull-right">9</b>
                   <i class="glyphicon glyphicon-envelope icon text-info-lter"></i> -->
                   <span class="font-bold" translate="aside.nav.EMAIL">IOS定制化开发</span>
                 </a>
               </li>
-              <li ui-sref-active="active" ng-click="filter(4,-1)">
+              <li ui-sref-active="active" ng-click="filter(4,-1,0)">
                 <a ui-sref="app.mail.list">
 <!--                   <b class="badge bg-info pull-right">9</b>
                   <i class="glyphicon glyphicon-envelope icon text-info-lter"></i> -->
@@ -163,33 +163,33 @@
                 </a>
               </li>
 
-              <li ng-click="filter(5,-1)">
+              <li >
                 <a href class="auto">
 
-                  <span class="font-bold">教程</span>
+                  <span class="font-bold" ng-click="filter(5,-1,0)">教程</span>
                 </a>
                 <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header" ng-click="filter(5,0)">
+                  <li class="nav-sub-header" >
                     <a href>
-                      <span>教程</span>
+                      <span ng-click="filter(5,-1)">教程</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(5,1)">
+                  <li ui-sref-active="active" ng-click="filter(5,0,0)">
                     <a ui-sref="apps.note">
                       <span>设计教程</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(5,2)">
+                  <li ui-sref-active="active" ng-click="filter(5,1,0)">
                     <a ui-sref="apps.contact">
                       <span>前端教程</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(5,3)">
+                  <li ui-sref-active="active" ng-click="filter(5,2,0)">
                     <a ui-sref="app.weather">
                       <span>AngularJs教程</span>
                     </a>
                   </li>
-                  <li ui-sref-active="active" ng-click="filter(5,4)">
+                  <li ui-sref-active="active" ng-click="filter(5,3,0)">
                     <a ui-sref="app.weather">
                       <span>CG教程</span>
                     </a>
@@ -209,10 +209,59 @@
     <!-- content -->
     <div class="app-content">
 
-          <div class="property" ng-repeat="product in items track by $index">
+
+          <div class = "headtitle" ng-if="classA < 0 && classB < 0 && pageIndex == 0">
+              <h1>最新的设计开发资源</h1>
+              <h4>UI设计，原型设计，图标设计，外包，毕设，让您的设计开发流程更加顺畅！</h4>
+              <div class='pin'>个性化定制</div>
+
+          </div>
+          
+          <ul ng-if="classA < 0 &&  classB < 0 && pageIndex == 0">
+              <li style="display: inline-block;margin: 15px;" >
+                  精品推荐
+              </li>
+
+              <li style="display: inline-block;margin: 15px;" >
+                  销量最多
+              </li>
+
+              <li style="display: inline-block;margin: 15px;" >
+                  最新上传
+              </li>
+          </ul>
+          
+          
+        
+
+         
+          <ul ng-if="classA >=0 ||  classB >= 0" ng-class="{'blackbackground' : pageIndex == 1}">
+              <li ng-repeat="route in routes track by $index" style="display: inline-block;margin: 15px;" ng-click="filter_title(route.index[0],route.index[1],0,$index)">
+                <span ng-if="$index > 0 && route.name.length > 0">></span>
+                <a>{{route.name}}</a>
+              </li>
+          </ul>
+
+          <div class="itemdetail" ng-if="pageIndex == 1">
+
+              <h2>简约电商网站UI</h2>
+              <h4>简约优雅的设计</h4>
+              <h4>包含19个PSD文件，4个sketch文件，同时适用于web和mobile。</h4>
+              <div class='pin'>购买￥20</div>
+    
+          </div>
+          <div class="imagedetail" ng-if="pageIndex == 1">
+              <p>预览图</p>
+              <img ng-repeat="image in currentProduct.images" style="background: url({{image}}) center;background-size: cover;" ng-if="pageIndex == 1">
+          </div>
+        
+          
+
+
+          <div class="property" ng-repeat="product in items track by $index" ng-if = "pageIndex == 0">
               <div class="image">
                   <div class="content">
-                      <a href="detail.html"></a>
+                      <a href="#" ng-click="showDetail(product)"></a>
                       <!-- <img src="img/property-small-1.png" alt=""> -->
                       <img  style="background: url({{product.images[0]}}) center;background-size: cover;" alt="">
                   </div><!-- /.content -->
@@ -220,7 +269,7 @@
               </div><!-- /.image -->
 
               <div class="title">
-                  <h2><a href="detail.html">{{product.title}}</a></h2>
+                  <h2><a href="#" ng-click="showDetail(product)">{{product.title}}</a></h2>
               </div><!-- /.title -->
 
               <!--   -->
@@ -232,6 +281,9 @@
         
 
         </div>
+
+
+
 
     <!-- /content -->
 
