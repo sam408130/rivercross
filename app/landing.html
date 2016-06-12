@@ -5,13 +5,20 @@
       <h1>最新的设计开发资源</h1>
       <h4>UI设计，原型设计，图标设计，外包，毕设</h4>
     </div>
-    <button class="primary-btn customize-btn">个性化定制</button>
+
+    <ul class="actions">
+      <li class="action">
+        <a href="#/category/" class="btn btn-green">个性化定制</a>
+      </li>
+    </ul>
   </div>
 </div>
   
 <div class="container">  
   <ul class="landing-page-category">
-    <li ng-click="rank_filter('score',0)" ng-class="{'selected': filterIndex == 0}">精品推荐</li>
+    <li>
+      <a ng-click="rank_filter('score',0)" ng-class="{'selected': filterIndex == 0}">精品推荐</a>
+    </li>
     <li ng-click="rank_filter('buycount',1)" ng-class="{'selected': filterIndex == 1}">销量最多</li>
     <li ng-click="rank_filter('createAt',2)" ng-class="{'selected': filterIndex == 2}">最新上传</li>
   </ul>
