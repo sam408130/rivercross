@@ -141,20 +141,27 @@ ul.top-nav-list li{
 
 }
 
-.intro{
-  margin-left:30px;  
-}
+
 
 /* Gallery ------------------ */
 
-.gallery{
-    padding:20px 40px;
+.container{
+
+  width:100%;
+  max-width:980px;
+  margin:0 auto;
+
 }
 
+.gallery{
+    margin:0 -20px;
+    font-size:13px;
+}
 
 .landing-page-category li{
     display:inline-block;
     margin-right:20px;
+    margin-top:20px;
 }
 
 .products-list{
@@ -162,7 +169,7 @@ ul.top-nav-list li{
 }
 
 .products-list li{
-    margin:10px 30px;
+    margin:0 20px 40px;
     display:inline-block;
 }
 
@@ -171,9 +178,9 @@ ul.top-nav-list li{
     height:225px;
     border-radius:5px;
     
-    
-
 }
+
+
 /* Breadcrumb------------------ */
 
 .breadcrumb-nav{
@@ -227,8 +234,18 @@ ul.top-nav-list li{
 }
 
 
+/*********************
 
+    Media Queries
 
+**********************/
+
+@media (min-width: ){
+  
+
+  
+
+}
 
 
 
