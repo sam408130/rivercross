@@ -1,0 +1,24 @@
+#sidebar{
+
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:230px;
+    color:#C6C6C6;
+    background-color:#1B1B1B;
+
+}
+
+#sidebar img{
+    padding:50px;   
+}
+
+#sidebar ul{
+  list-style:none;
+  margin: 20px 0;
+  padding-left:40px;
+}
+
+#sidebar ul li {
+    margin-bottom:14px; 
+}

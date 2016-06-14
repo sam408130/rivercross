@@ -1,0 +1,17 @@
+<div class="cards">
+  <ul >
+
+    <li class="card" ng-repeat="item in items track by $index" >
+      <a href="#/detail/{{item.id}}">
+        <div class="card-thumb" style="background-image:url({{item.images[0]}}) ;background-position: 50% 50%;background-size:cover;"></div>
+      </a> 
+      <div class="card-info clearfix">
+        <a href="#/detail/{{item.id}}"><p class="card-title">{{item.title}}</p></a> 
+        <span class="card-price">￥{{item.price}}</span>
+        <p class="card-tag">分类：UI设计, PSD资源,  电商资</p>
+        
+      </div>    
+    </li>
+
+  </ul>
+</div>

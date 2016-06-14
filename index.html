@@ -4,68 +4,69 @@
   <meta charset="utf-8" />
   <title>RiverCross</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" type="text/css" href="content/css/normalize.css">
+  <!-- css file -->
   <link rel="stylesheet" type="text/css" href="content/css/app.css">
+</head>
+<body>
+  <!-- top navigation -->
+  <div id="top-nav">
+    <ul>
+      <li>博客</li>
+      <li>关于</li>
+      <li>联系我们</li>
+    </ul>
+  </div>
+  <!-- sidebar directive stays at side of every page -->
+  <rc-sidebar></rc-sidebar> 
+  <!-- page content changes based on route -->
+  <div ng-view id="page" ></div>
   
+  <!-- Third-party JS -->
+  <script src="vendor/jquery-1.12.4.min.js"></script>
   <script src="vendor/angular.min.js"></script>
   <script src="vendor/angular-route.min.js"></script>
   <script src="vendor/leancloud.js"></script>
+
+  <!-- main app module -->
   <script src="app/app.module.js"></script>
-  <script src="app/leancloudService.js"></script>
-  <script src="app/landingCtrl.js"></script>
-  <script src="app/categoryCtrl.js"></script>
-  <script src="app/detailCtrl.js"></script>
+
+  <!-- js files -->
+  <script src="app/constants.js"></script>
+  <script src="app/services/leancloudService.js"></script>
   <script src="app/route.js"></script>
-
+  <script src="app/directives/rcCards.directive.js"></script>
+  <script src="app/directives/rcSidebar.directive.js"></script>
+  <script src="app/landing/landingCtrl.js"></script>
+  <script src="app/category/categoryCtrl.js"></script>
+  <script src="app/detail/detailCtrl.js"></script>
   
-</head>
-<body>
+  <script>
 
-  <div id="side-bar" class="clearfix">
-    <img src="content/img/rc-logo.png" alt="">
-    <ul class="side-category">
-      <li >
-        <a href="#/category/0/-1">Ionic产品</a>
-        <ul class="side-sub-category">
-          <li><a href="#/category/0/0">电商类</a></li>
-          <li><a href="#/category/0/1">社交类</a></li>
-        </ul>
-      </li>
+    var header = $('#top-nav');
+    var range = header.outerHeight();
+
+    $(window).on('scroll', function () {
+  
+      var scrollTop = $(this).scrollTop();
       
-      <li >
-        <a href="#/category/1/-1">UI设计</a>
-        <ul class="sub-catagory">
-          <li><a href="#/category/1/0">App UI</a></li>
-          <li><a href="#/category/1/1">Web UI</a></li>
-          <li><a href="#/category/1/2">Icons</a></li>
-        </ul>
-      </li>
+      // var offset = header.offset().top;
+      
+      // var height = header.outerHeight();
+      
+      // offset = offset + height / 2;
 
-      <li >
-        <a href="#/category/2/-1">前端网页</a>
-      </li>
-
-      <li >
-        <a href="#/category/3/-1">学习教程</a>
-      </li>
-
-      <li >
-        <a href="#/category/4/-1">个性化接单</a>
-      </li>
-    </ul>
-  </div>
-
-  <div ng-view id="content" ></div>
-
-
-  <div id="top-nav">
-      <a id="fold-btn" href="#">产品分类</a>
-      <ul class="top-nav-list">
-        <li>博客</li>
-        <li>关于</li>
-        <li>联系我们</li>
-      </ul>
-  </div>
+      var calc = scrollTop / range;
+    
+      header.css({ 'background-color':'rgba(40, 40, 40, '+ calc +')' });
+    
+      if ( calc > '1' ) {
+        calc = 1;
+      } else if ( calc < '0' ) {
+        calc = 0;
+      }
+  
+    });
+  </script>
 
 
    

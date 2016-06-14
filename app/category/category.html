@@ -1,0 +1,13 @@
+<div id="breadcrumb">
+  <ul ng-if="classA >=0 ||  classB >= 0" >
+    <li ng-repeat="route in routes track by $index" >
+      <span ng-if="$index > 0 && route.name.length > 0">&nbsp;&gt;&nbsp;</span>
+      <a href="#/category/{{route.index[0]}}/{{route.index[1]}}" ng-if="$index < 3 && $index > 0">{{route.name}}</a>
+      <a ng-if="$index == 3">{{route.name}}</a>
+      <a ng-if="$index == 0" href="#/">{{route.name}}</a>
+    </li>
+  </ul>    
+</div>
+<div class="container">
+    <rc-cards items="items"></rc-cards>
+</div>

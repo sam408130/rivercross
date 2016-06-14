@@ -12,17 +12,17 @@
     $routeProvider
 
     .when('/', {
-      templateUrl: 'app/landing.html',
+      templateUrl: 'app/landing/landing.html',
       controller: 'LandingCtrl'
     })
 
     .when('/category/:a/:b',{
-    	templateUrl:'app/category.html',
+    	templateUrl:'app/category/category.html',
     	controller:'CategoryCtrl'
     })
 
     .when('/detail/:id',{
-    	templateUrl:'app/detail.html',
+    	templateUrl:'app/detail/detail.html',
     	controller:'DetailCtrl'
     })
 

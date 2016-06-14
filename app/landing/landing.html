@@ -1,0 +1,39 @@
+
+<div class="main-header">
+  <div class="container">
+    <div class="intro">
+      <h1>最新的设计开发资源</h1>
+      <h4>UI设计，原型设计，图标设计，外包，毕设</h4>
+    </div>
+
+    <ul class="actions">
+      <li class="action">
+        <a href="#/category/" class="btn btn-green">个性化定制</a>
+      </li>
+    </ul>
+  </div>
+</div>
+  
+<div class="container"> 
+
+  <div class="rc-tabs">
+    <a ng-click="rank_filter('score',0)" ng-class="{'selected': filterIndex == 0}">精品推荐</a>
+    <a ng-click="rank_filter('buycount',1)" ng-class="{'selected': filterIndex == 1}">销量最多</a>
+    <a ng-click="rank_filter('createAt',2)" ng-class="{'selected': filterIndex == 2}">最新上传</a>
+  </div> 
+
+
+  <rc-cards items="items"></rc-cards>
+
+</div>  <!-- container ends -->
+
+<div id="footer">
+  <div class="wechat-info">
+    <img class="qrcode" src="" alt="">
+    <p>关注我们的公众号可以获得免费产品下载</p>
+    <p>公众号：riverCross</p>
+  </div>
+</div>
+
+
+

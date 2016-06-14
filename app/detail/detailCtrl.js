@@ -15,13 +15,16 @@
 		leancloudService.getItem(id,function(result){
 			$scope.$apply(function(){
 				$scope.currentItem = result._serverData;
+				var key = String($scope.currentItem.classA) + '_' + String($scope.currentItem.classB);
+				$scope.routes = RoutesDict[key];
+				$scope.routes.push({name:$scope.currentItem.title});_
+				console.log($scope.currentItem);
+
 			});
 		});
 
-
-
-
 		
+
 	}
 	
 

@@ -1,0 +1,112 @@
+#page{
+
+    margin-left:230px;
+    padding-top:60px;
+}
+
+//=====================================================
+// Headers
+//=====================================================
+
+
+.main-header{
+
+  height: 268px;
+  margin-top:-60px;
+  background:url('../img/birds.jpg') repeat-x;
+  background-size:contain;
+  padding:50px;
+  
+
+}
+.main-header .actions {
+    position: absolute;
+    z-index: 5;
+    bottom: -132px;
+    right: 0;
+}
+
+
+
+//=====================================================
+// Tabs
+//=====================================================
+
+.rc-tabs a{
+    display: inline-block;
+    margin-right:30px;
+    margin-top:20px;
+}
+//=====================================================
+// Product Page
+//=====================================================
+
+
+
+.product-header{
+  height: 268px;
+  background-color:#353535;
+  padding:50px;
+}
+
+.product-header .actions {
+    position: absolute;
+    z-index: 5;
+    bottom: -132px;
+    right: 0;
+}
+
+ul.images{
+  margin:0 -10px 0;
+}
+
+.images .image{
+  display: block;
+  float: left;
+  width:50%;
+}
+
+.image li:nth-child(2n+1){
+  clear:left;
+}
+
+.image-wrapper{
+  margin:0 10px 20px;
+}
+
+.image-display{
+  overflow: hidden;
+  border-radius:2px;
+  height:364px;
+}
+
+.image-display img{
+
+  display: block;
+  // max-width:100%;
+  width:480px;
+
+}
+
+//=====================================================
+// footer
+//=====================================================
+
+#footer{
+    height:250px;
+    background-color:#2A2A2A;
+    padding:20px 0;
+}
+
+.wechat-info{
+    text-align:center;
+}
+
+.qrcode{
+    height:100px;
+    width:100px;
+    border-radius:10px;
+    border:15px solid #222;
+    background-image:url('../img/qrcode.png');
+    background-size:cover;
+}

@@ -1,322 +1,268 @@
-/*********************
-
-    Basic Styles
-
-**********************/
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
 
 body {
-  
   margin: 0;
   font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:#3D3D3D;
-  color: #F1F1F1;
+  background-color: #3D3D3D;
+  color: #F1F1F1; }
 
-}
-
-h1 {  
-  font-size: 2rem; /* 32px/16px  */
+h1 {
+  font-size: 2rem;
+  /* 32px/16px  */
   text-transform: uppercase;
   font-weight: normal;
-  line-height: 1.2;
-}
+  line-height: 1.2; }
 
 h2 {
-  font-size: 1.5em; /* 32px/16px  */
+  font-size: 1.5em;
+  /* 32px/16px  */
   font-weight: normal;
   line-height: 1.1;
-  margin: 0 0 .5em; /* 0 0 26px */
-}
+  margin: 0 0 .5em;
+  /* 0 0 26px */ }
 
 h3 {
-  font-size: 1.1em; /* 20px/16px  */
+  font-size: 1.1em;
+  /* 20px/16px  */
   color: #48525c;
   line-height: 1.2;
-  margin-bottom: 1.7em; /* 34px */
-}
+  margin-bottom: 1.7em;
+  /* 34px */ }
+
+p {
+  margin: 0;
+  padding: 0; }
 
 img {
   max-width: 100%;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 ul,
 ol {
-  margin:0;
-  padding:0;
-  list-style:none;
-
-}
-
-
-a:link {
-
-  text-decoration: none;
-}
-
-
-
-/*********************
-
-    Side-bar Styles
-
-**********************/
-
-#side-bar{
-
-    position:fixed;
-    top:0;
-    bottom:0;
-    width:230px;
-    color:#C6C6C6;
-    background-color:#1B1B1B;
-
-}
-
-#side-bar img{
-    padding:50px;   
-}
-
-#side-bar ul{
-  list-style:none;
-  margin: 20px 0;
-  padding-left:40px;
-}
-
-#side-bar li {
-    margin-bottom:14px; 
-}
-
-/*********************
-
-    Content Styles
-
-**********************/
-
-/* Top Nav ------------------ */
-#top-nav {
-
-    height:60px;
-    color:#C6C6C6;
-    line-height:60px;
-    background-color:rgba(0, 0, 0, 0.2);
-    z-index:1000;
-    position:fixed;
-    top:0;
-    left:230px;
-    width:calc(100vw - 230px);
-
-}
-
-#fold-btn{
-    
-    float:left;
-    margin-left:10px;
-    color:#c6c6c6;
-}
-
-ul.top-nav-list li{
-
-     float:right;
-     margin-right:50px;
-}
-
-.container{
-
-  width:100%;
-  max-width:980px;
-  margin:0 auto;
-  position:relative;
-
-}
-
-/* Main Header ------------------ */
-
-#content{
-    
-    margin-left:230px;
-}
-
-.main-header{
-
-  height: 268px;
-  background:url('../img/birds.jpg') repeat-x;
-  background-size:contain;
-  padding:50px;
-  
-
-}
-.main-header .actions {
-    position: absolute;
-    z-index: 5;
-    bottom: -132px;
-    right: 0;
-}
-.btn {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    height: 48px;
-    color: #FFFFFF;
-    font-size: 16px;
-    line-height: 18px;
-    text-align: center;
-    font-weight: 600;
-    white-space: nowrap;
-    text-transform: uppercase;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    overflow: hidden;
-    vertical-align: middle;
-}
-.btn {
-    padding: 16px;
-}
-
-.btn.btn-green {
-    color: #FFFFFF;
-    background-color: #33a466;
-}
-
-/* Gallery ------------------ */
-
-
-
-.gallery{
-    margin:0 -20px;
-    font-size:13px;
-}
-
-.landing-page-category li{
-    display:inline-block;
-    margin-right:20px;
-    margin-top:20px;
-}
-
-.landing-page-category li.selected:after{
-  
-    opacity: 1;
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #2F8BE6;
-    -webkit-transition: width 125ms ease,opacity 200ms ease;
-    transition: width 125ms ease,opacity 200ms ease;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-
-}
-
-.products-list{
-    margin-top: 40px;
-}
-
-.products-list li{
-    margin:0 20px 40px;
-    display:inline-block;
-}
-
-.product-thumb{
-    width:300px;
-    height:225px;
-    border-radius:5px;
-    
-}
-
-
-/* Breadcrumb------------------ */
-
-.breadcrumb-nav{
-    margin-top:100px;
-    margin-left:40px;
-    
-
-}
-
-.breadcrumb-nav ul > li{
-    display:inline-block;
-    font:12px;
-    color:#c6c6c6;
-}
-
-/* Detail Header------------------ */
-
-.detail-header{
-   height: 300px;
-  background-color:#353535;
-  padding:50px;
-}
-
-/* Footer ------------------ */
-#footer{
-    height:250px;
-    background-color:#2A2A2A;
-    padding:20px 0;
-}
-
-.wechat-info{
-    text-align:center;
-}
-
-.qrcode{
-    height:100px;
-    width:100px;
-    border-radius:10px;
-    border:15px solid #222;
-    background-image:url('../img/qrcode.png');
-    background-size:cover;
-}
-
-
-/* Float Clearfix ------------------ */
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 .clearfix:after {
   content: "";
   display: table;
+  clear: both; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none; }
+  a:link {
+    color: #48525c; }
+  a:visited {
+    color: #48525c; }
+  a:hover {
+    outline-width: 0;
+    color: #fff; }
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative; }
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 230px;
+  color: #C6C6C6;
+  background-color: #1B1B1B; }
+
+#sidebar img {
+  padding: 50px; }
+
+#sidebar ul {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 40px; }
+
+#sidebar ul li {
+  margin-bottom: 14px; }
+
+#top-nav {
+  height: 60px;
+  width: calc(100vw - 230px);
+  position: fixed;
+  top: 0;
+  left: 230px;
+  z-index: 100;
+  color: #C6C6C6;
+  line-height: 60px; }
+
+#top-nav ul li {
+  float: right;
+  margin-right: 50px; }
+
+#page {
+  margin-left: 230px;
+  padding-top: 60px; }
+
+.main-header {
+  height: 268px;
+  margin-top: -60px;
+  background: url("../img/birds.jpg") repeat-x;
+  background-size: contain;
+  padding: 50px; }
+
+.main-header .actions {
+  position: absolute;
+  z-index: 5;
+  bottom: -132px;
+  right: 0; }
+
+.rc-tabs a {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 20px; }
+
+.product-header {
+  height: 268px;
+  background-color: #353535;
+  padding: 50px; }
+
+.product-header .actions {
+  position: absolute;
+  z-index: 5;
+  bottom: -132px;
+  right: 0; }
+
+ul.images {
+  margin: 0 -10px 0; }
+
+.images .image {
+  display: block;
+  float: left;
+  width: 50%; }
+
+.image li:nth-child(2n+1) {
+  clear: left; }
+
+.image-wrapper {
+  margin: 0 10px 20px; }
+
+.image-display {
+  overflow: hidden;
+  border-radius: 2px;
+  height: 364px; }
+
+.image-display img {
+  display: block;
+  width: 480px; }
+
+#footer {
+  height: 250px;
+  background-color: #2A2A2A;
+  padding: 20px 0; }
+
+.wechat-info {
+  text-align: center; }
+
+.qrcode {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  border: 15px solid #222;
+  background-image: url("../img/qrcode.png");
+  background-size: cover; }
+
+.cards {
+  margin: 0 -20px;
+  font-size: 13px;
+  overflow: hidden;
+  margin-top: 30px; }
+
+.card {
+  margin: 0 20px 40px;
+  display: inline-block; }
+
+.card-thumb {
+  width: 300px;
+  height: 225px;
+  border-radius: 5px; }
+
+.card-info {
+  position: relative;
+  padding: 10px 0 0 0; }
+
+.card-title {
+  float: left;
+  display: block;
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 27px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.card-price {
+  position: relative;
+  top: 0;
+  right: 0;
+  float: right;
+  padding: 6px 0;
+  width: 48px;
+  color: #2F8BE6;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  background: #2A2A2A;
+  border-radius: 4px; }
+
+.card-tag {
   clear: both;
-}
+  padding: 5px 0 0 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #949494; }
 
+.btn {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 48px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  vertical-align: middle; }
 
-/*********************
+.btn {
+  padding: 16px; }
 
-    Media Queries
+.btn.btn-green {
+  color: #FFFFFF;
+  background-color: #33a466; }
 
-**********************/
+#breadcrumb {
+  position: absolute;
+  top: 0px;
+  margin: 20px 0 20px 10px;
+  z-index: 101; }
 
-@media (min-width: ){
-  
+#breadcrumb ul > li {
+  display: inline-block;
+  font: 12px;
+  color: #c6c6c6; }
 
-  
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=app.css.map */

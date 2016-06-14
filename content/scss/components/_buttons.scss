@@ -1,0 +1,28 @@
+
+.btn {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    height: 48px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.btn {
+    padding: 16px;
+}
+
+.btn.btn-green {
+    color: #FFFFFF;
+    background-color: #33a466;
+}

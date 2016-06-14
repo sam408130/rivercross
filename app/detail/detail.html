@@ -1,0 +1,44 @@
+<div id="breadcrumb">
+  <ul ng-if="classA >=0 ||  classB >= 0" >
+    <li ng-repeat="route in routes track by $index" >
+      <span ng-if="$index > 0 && route.name.length > 0"></span>
+      <a href="#/category/{{route.index[0]}}/{{route.index[1]}}" ng-if="$index < 3 && $index > 0">{{route.name}}</a>
+      <a ng-if="$index == 3">{{route.name}}</a>
+      <a ng-if="$index == 0" href="#/">{{route.name}}</a>
+    </li>
+  </ul>    
+</div>
+<div class="page-product"> 
+  <div class="product-header">
+    <div class="container">
+      <h2 class="product-title">{{currentItem.title}}</h2>
+      <h4 class="product-subtitle">{{currentItem.subtitle}}</h4>
+      <div class="product-description">{{currentItem.description}}</div>
+      <ul class="actions">
+        <li class="action">
+          <a href="#/category/" class="btn btn-green">购买产品</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container section-content"> 
+    <div class="rc-tabs">
+      <a href="#" class="tab">预览图</a>
+      <a href="#" class="tab">商品详情</a>
+    </div>
+
+    <div class="preview">
+      <ul class="images">
+        <li class="image" ng-repeat="image in currentItem.images">
+          <div class="image-wrapper">
+            <div class="image-display">
+              <img src="{{image}}" />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div> 
+
+  </div>
+</div>
