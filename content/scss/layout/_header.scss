@@ -1,0 +1,164 @@
+/* -------------------------------- 
+
+Header
+-------------------------------- */
+
+#header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: $header-height-S;
+    width: 100%;
+    
+    @include clearfix;
+    @include font-smoothing;
+    @include MQ(M) {
+        
+        height: $header-height-M;
+    }
+}
+
+.cd-nav-trigger {
+    /* navigation trigger - visible on mobile devices only */
+    float: right;
+    position: relative;
+    display: block;
+    width: 34px;
+    height: 44px;
+    margin-right: 5%;
+    /* hide text */
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+
+
+    span, span::before, span::after {
+        /* hamburger icon in CSS */
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: 24px;
+        background: $color-3;
+    }
+
+    span {
+        /* line in the center */
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        margin-top: -2px;
+        @include transition(background .2s);
+    }
+
+    span::before, span::after {
+        /* other 2 lines */
+        content: '';
+        right: 0;
+        /* Force Hardware Acceleration in WebKit */
+        @include transform(translateZ(0));
+        @include backface-visibility(hidden);
+        
+        @include transform-origin(0% 50%);
+        @include transition(transform .2s);
+    }
+
+    span::before {
+        /* menu icon top line */
+        top: -6px;
+    }
+
+    span::after {
+        /* menu icon bottom line */
+        top: 6px;
+    }
+
+    &.nav-is-visible {
+        span {
+            /* hide line in the center */
+            background: rgba($color-3, 0);
+        }
+
+        span::before, span::after {
+            /* keep visible other 2 lines */
+            background: rgba($color-3, 1);
+        }
+
+        span::before {
+            @include transform(translateX(4px) translateY(-3px) rotate(45deg));
+        }
+
+        span::after {
+            @include transform(translateX(4px) translateY(2px) rotate(-45deg));
+        }
+    }
+
+    @include MQ(M) {
+        display: none;
+    }
+}
+
+/* -------------------------------- 
+
+Top Navigation
+
+-------------------------------- */
+
+.cd-nav {
+    /* top nav - not visible on mobile devices */ 
+    display: none;
+
+    @include MQ(M) {
+        display: block;
+        float: right;
+        height: 100%;
+    }
+}
+
+.cd-top-nav {
+    > li > a::before  {
+        /* reset style */
+        display: none;
+    }
+
+    > li a {
+        padding: 1em 5% !important;
+    }
+
+    @include MQ(M) {
+        height: 100%;
+
+        a {
+            display: block;
+            font-size: 1.4rem;
+            color: $color-3;
+        }
+
+        > li {
+            display: inline-block;
+            margin-right: 1em;
+            height: 100%;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        > li a {
+            padding: 1em .6em !important;
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    @include MQ(L) {
+        li:not(.has-children) a:hover {
+            color: $color-2;
+        }
+    }
+}
+
+

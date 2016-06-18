@@ -10,33 +10,33 @@ html {
 
 body {
   
+  
+  @include text(1em,1.5, $color: $light-grey);
   margin: 0;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:#3D3D3D;
-  color: #F1F1F1;
+  font-family: $stack-helvetica;
+  background-color: $mid-grey;
+  
 
 }
 
 h1 {  
-  font-size: 2rem; /* 32px/16px  */
-  text-transform: uppercase;
-  font-weight: normal;
-  line-height: 1.2;
+
+  @include text(2rem,1.2,normal);
+  
 }
 
 h2 {
-  font-size: 1.5em; /* 32px/16px  */
-  font-weight: normal;
-  line-height: 1.1;
-  margin: 0 0 .5em; /* 0 0 26px */
+
+  @include text(1.5rem,1.1,normal);
+  
 }
 
 h3 {
-  font-size: 1.1em; /* 20px/16px  */
-  color: #48525c;
-  line-height: 1.2;
-  margin-bottom: 1.7em; /* 34px */
+
+  @include text(1.1rem,1.1,normal);
+  
 }
+
 p{
   margin:0;
   padding:0;
@@ -44,7 +44,6 @@ p{
 
 img {
   max-width: 100%;
-  margin-bottom: 20px;
 }
 
 ul,
@@ -55,29 +54,20 @@ ol {
 
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-///////////////////to change//////////////
 
 a {
   background-color: transparent; 
   -webkit-text-decoration-skip: objects; 
   text-decoration: none;
+  cursor:pointer;
 
-  &:link{
-    color:#48525c;
-  }
-
-  &:visited{
-    color:#48525c;
+  &:link,&:visited{
+    color:$light-grey;
   }
 
   &:hover{
     outline-width: 0;
-    color:#fff;
+    color:$white;
   }
 
 }

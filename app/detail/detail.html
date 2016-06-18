@@ -1,4 +1,4 @@
-<div id="breadcrumb">
+<!-- <div id="breadcrumb">
   <ul ng-if="classA >=0 ||  classB >= 0" >
     <li ng-repeat="route in routes track by $index" >
       <span ng-if="$index > 0 && route.name.length > 0"></span>
@@ -7,20 +7,27 @@
       <a ng-if="$index == 0" href="#/">{{route.name}}</a>
     </li>
   </ul>    
-</div>
-<div class="page-product"> 
-  <div class="product-header">
-    <div class="container">
-      <h2 class="product-title">{{currentItem.title}}</h2>
-      <h4 class="product-subtitle">{{currentItem.subtitle}}</h4>
-      <div class="product-description">{{currentItem.description}}</div>
-      <ul class="actions">
-        <li class="action">
-          <a href="#/category/" class="btn btn-green">购买产品</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+</div> -->
+
+  <div class="banner product-banner">
+    
+      <div class="container">
+        <div class="intro">
+          <h1 class="product-title">{{currentItem.title}}</h1>
+          <h4 class="product-subtitle">{{currentItem.subtitle}}</h4>
+          <div class="product-description">{{currentItem.description}}</div>
+        </div>
+
+        <ul class="actions">
+          <li class="action">
+            <a href="#" class="btn btn-green">购买产品</a>
+          </li>
+        </ul>
+        
+      </div><!-- container ends -->
+    
+  </div><!-- banner ends -->
+
 
   <div class="container section-content"> 
     <div class="rc-tabs">
@@ -39,6 +46,5 @@
         </li>
       </ul>
     </div> 
-
   </div>
-</div>
+

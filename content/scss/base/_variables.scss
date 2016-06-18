@@ -1,0 +1,42 @@
+// colors
+$white:       #fff;
+$light-grey:  #C6C6C6;
+$mid-grey:    #3D3D3D;
+$dark-grey:   #1B1B1B;
+
+$color-1: #3e454c; // Mako
+$color-2: #1784c7; // Denim
+$color-3: #ffffff; // White
+$color-4: #ff7e66; // Salmon
+
+
+// fonts 
+
+$primary-font: 'Open Sans', sans-serif;
+
+$stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
+$stack-abolition  : 'Abolition Regular', $stack-sans-serif;
+
+// header size
+
+$header-height-S: 45px;
+$header-height-M: 55px;
+
+//sidebar size
+
+$sidebar-width-M: 110px;
+$sidebar-width-L: 200px;
+
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;     
+$L:     1180px;  
+
+$fullwidth: 100%;   
+
+// Asset paths
+
+$path-img  : '../img';
+$path-font : '../fonts';

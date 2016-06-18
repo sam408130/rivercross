@@ -2,27 +2,48 @@
 <html ng-app="app">
 <head>
   <meta charset="utf-8" />
-  <title>RiverCross</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <!-- css file -->
-  <link rel="stylesheet" type="text/css" href="content/css/app.css">
+
+  <title>RiverCross</title>
+  <link rel="stylesheet" type="text/css" href="content/css/app.css"><!-- css file -->
+  <script src="vendor/modernizr.js"></script><!-- Modernizr -->
 </head>
 <body>
-  <!-- top navigation -->
-  <div id="top-nav">
-    <ul>
+<!-- top header -->
+<header id="header" class="cd-main-header">
+  <a href="#0" class="cd-logo"><img src="img/cd-logo.svg" alt="Logo"></a>
+  <a href="#0" class="cd-nav-trigger" ng-click="opennav = !opennav" ng-class="{'nav-is-visible':opennav}">
+  <span></span>
+  </a>
+
+  <nav class="cd-nav">
+    <ul class="cd-top-nav">
       <li>博客</li>
       <li>关于</li>
       <li>联系我们</li>
     </ul>
-  </div>
-  <!-- sidebar directive stays at side of every page -->
-  <rc-sidebar></rc-sidebar> 
-  <!-- page content changes based on route -->
-  <div ng-view id="page" ></div>
+  </nav>
+</header>
+   
   
+<main class="cd-main-content"> 
+  <!-- sidebar directive stays at side of every page -->
+  <rc-sidebar id="sidebar" class="cd-side-nav" ng-class="{'nav-is-visible':opennav}"></rc-sidebar>
+  <!-- page content changes based on route -->
+  <div ng-view id="page" class="content-wrapper">
+    
+  </div>
+
+
+</main>
+
+
+
+
   <!-- Third-party JS -->
-  <script src="vendor/jquery-1.12.4.min.js"></script>
+  <script src="vendor/jquery-2.1.4.js"></script>
+  <script src="vendor/jquery.menu-aim.js"></script>
+  <script src="vendor/main.js"></script>
   <script src="vendor/angular.min.js"></script>
   <script src="vendor/angular-route.min.js"></script>
   <script src="vendor/leancloud.js"></script>
@@ -42,19 +63,13 @@
   
   <script>
 
-    var header = $('#top-nav');
+    var header = $('#header');
     var range = header.outerHeight();
 
     $(window).on('scroll', function () {
   
       var scrollTop = $(this).scrollTop();
-      
-      // var offset = header.offset().top;
-      
-      // var height = header.outerHeight();
-      
-      // offset = offset + height / 2;
-
+  
       var calc = scrollTop / range;
     
       header.css({ 'background-color':'rgba(40, 40, 40, '+ calc +')' });
@@ -66,9 +81,7 @@
       }
   
     });
+
   </script>
-
-
-   
 </body>
 </html>

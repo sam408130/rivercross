@@ -1,8 +1,40 @@
 .container{
+	
+	width:100%;
+  padding:10px;
+  max-width:470px;
+	margin:0 auto;
 
-  width:100%;
-  max-width:980px;
-  margin:0 auto;
-  position:relative;
+  @include MQ(M) {
+
+    &{
+       width:100%;
+       max-width:640px;
+       padding:0;
+       position:relative;
+    }
+    &::before {
+      display: none;
+      content: 'desktop';
+    }
+    
+  }
+
+  @include MQ(L) {
+
+  	&{
+	     width:100%;
+  	   max-width:980px;
+  	   padding:0;
+  	   position:relative;
+  	}
+  	&::before {
+      display: none;
+      content: 'desktop';
+    }
+    
+  }
+
+  
 
 }

@@ -3,61 +3,93 @@
 //=====================================================
 
 .cards{
-    margin:0 -20px;
+    
+margin:0;
+padding:0;
+margin-top: 1.6em;
+
+
+@include MQ(M){
+
+    margin:30px -20px 0;
     font-size:13px;
     overflow: hidden;
-    margin-top: 30px;
-}
-
-.card{
-    margin:0 20px 40px;
-    display:inline-block;
-}
-
-.card-thumb{
-    width:300px;
-    height:225px;
-    border-radius:5px;
     
 }
 
-.card-info {
-    position: relative;
-    padding: 10px 0 0 0;
-}
+    .card{
 
-.card-title {
-    float: left;
-    display: block;
-    color: #FFFFFF;
-    font-size: 13px;
-    line-height: 27px;
-    font-weight: 400;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+        width: 100%;
+        margin:0 0 30px;
+        padding:0;
 
-.card-price {
-    position: relative;
-    top: 0;
-    right: 0;
-    float: right;
-    padding: 6px 0;
-    width: 48px;
-    color: #2F8BE6;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 600;
-    text-align: center;
-    background: #2A2A2A;
-    border-radius: 4px;
-}
+        
+        @include MQ(M){
+        margin:0 20px 40px;
+        display:inline-block;
+        width:300px;
+        }
 
-.card-tag {
-    clear: both;
-    padding: 5px 0 0 0;
-    font-size: 12px;
-    line-height: 20px;
-    color: #949494;
+
+        &-thumb{
+
+        width: 100%;
+        height: 280px;
+        border-radius:5px;
+
+            @include MQ(M){
+
+                width:300px;
+                height:225px;
+                border-radius:5px;
+          }
+        
+        }
+
+        &-info {
+
+            position: relative;
+            padding: 10px 0 0 0;
+        
+
+            .title {
+                
+                float: left;
+                display: block;
+                color: #FFFFFF;
+                font-size: 13px;
+                line-height: 27px;
+                font-weight: 400;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .price {
+                
+                position: relative;
+                top: 0;
+                right: 0;
+                float: right;
+                padding: 6px 0;
+                width: 48px;
+                color: #2F8BE6;
+                font-size: 14px;
+                line-height: 1;
+                font-weight: 600;
+                text-align: center;
+                background: $dark-grey;
+                border-radius: 4px;
+            }
+
+            .tag {
+                clear:both;
+                padding: 5px 0 0 0;
+                font-size: 12px;
+                line-height: 20px;
+                color: #949494;
+            }
+        }
+
+    }
 }

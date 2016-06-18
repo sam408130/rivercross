@@ -1,60 +1,102 @@
-#page{
 
-    margin-left:230px;
-    padding-top:60px;
-}
+/* -------------------------------- 
 
-//=====================================================
-// Headers
-//=====================================================
+Main Content
 
+-------------------------------- */
 
-.main-header{
+.cd-main-content {
 
-  height: 268px;
-  margin-top:-60px;
-  background:url('../img/birds.jpg') repeat-x;
-  background-size:contain;
-  padding:50px;
+  .content-wrapper {
+
+     padding: $header-height-S 0 0;
+
+  // Banner
+  .banner{
+
+      height:300px;
+      margin-top: -($header-height-M);
+      padding-top: ($header-height-M + 30px);
+      position:relative;
+
+      //box-shadow for banner
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 20px;
+        box-shadow: inset 0 -10px 10px 0 rgba(0,0,0,0.09);
+      }
+
+      //landing-page banner
+        &.main-banner{
+          background:url('../img/birds.jpg') repeat-x;
+          background-size:contain;
+          
+        }
+      
+      //product-page banner
+        &.product-banner{
+
+          background-color:#353535;
+          
+        }
+      
+      //action buttons
+        .actions {
+
+          text-align: left;
+          z-index: 5;
+
+        
+          @include MQ(L) {
+
+            //relative to wrapper
+
+              &{ 
+                position: absolute;
+                right: 0;
+                bottom: -132px; 
+              }
+
+            }
+          
+        } //action button end
+
+      } //banner end
+
+   }//content wrapper end
   
+  //content wraper has different margin left
+  @include MQ(M) {
 
-}
-.main-header .actions {
-    position: absolute;
-    z-index: 5;
-    bottom: -132px;
-    right: 0;
-}
+    .content-wrapper {
+      margin-left: $sidebar-width-M;
+      padding-top: $header-height-M;
+    }
+  }
 
+  @include MQ(L) {
 
+    .content-wrapper {
+      margin-left: $sidebar-width-L;
+    }
 
-//=====================================================
-// Tabs
-//=====================================================
-
-.rc-tabs a{
-    display: inline-block;
-    margin-right:30px;
-    margin-top:20px;
-}
-//=====================================================
-// Product Page
-//=====================================================
+  }
 
 
 
-.product-header{
-  height: 268px;
-  background-color:#353535;
-  padding:50px;
-}
+} 
 
-.product-header .actions {
-    position: absolute;
-    z-index: 5;
-    bottom: -132px;
-    right: 0;
-}
+/* -------------------------------- 
+
+    Preview images
+
+-------------------------------- */
 
 ul.images{
   margin:0 -10px 0;
@@ -87,26 +129,46 @@ ul.images{
   width:480px;
 
 }
+//=====================================================
+// Tabs
+//=====================================================
 
+.rc-tabs a{
+    display: inline-block;
+    margin-right:30px;
+    margin-top:20px;
+}
 //=====================================================
 // footer
 //=====================================================
 
 #footer{
-    height:250px;
+    height:300px;
     background-color:#2A2A2A;
-    padding:20px 0;
-}
+    padding:30px 0 0 0;
+    position:relative;
 
-.wechat-info{
-    text-align:center;
-}
 
-.qrcode{
-    height:100px;
-    width:100px;
-    border-radius:10px;
-    border:15px solid #222;
-    background-image:url('../img/qrcode.png');
-    background-size:cover;
+    .wechat-info{
+        text-align:center;
+
+        > p{
+      
+        @include text(.85rem,1.5,500,$mid-grey);
+
+        }
+    }
+
+    .qrcode{
+        height:100px;
+        width:100px;
+        border-radius:10px;
+        border:15px solid #222;
+        background-image:url('../img/qrcode.png');
+        background-size:cover;
+        margin-bottom: 2em;
+    }
+
+   
+
 }
