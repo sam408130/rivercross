@@ -298,6 +298,7 @@ Top Navigation
   @media only screen and (min-width: 768px) {
     .cd-nav {
       display: block;
+      
       float: right;
       height: 100%; } }
 
@@ -305,6 +306,7 @@ Top Navigation
   /* reset style */
   display: none; }
 .cd-top-nav > li a {
+    font-size: 16px;
   padding: 1em 5% !important; }
 @media only screen and (min-width: 768px) {
   .cd-top-nav {
@@ -416,8 +418,8 @@ ul.images {
       font-weight: 500;
       color: #3D3D3D; }
   #footer .qrcode {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border-radius: 10px;
     border: 15px solid #222;
     background-image: url("../img/qrcode.png");
